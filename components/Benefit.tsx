@@ -31,7 +31,7 @@ const partners = [
 
 export default function Benefit() {
   return (
-    <div className=" bg-gray-50 flex items-center justify-center p-4 md:p-8">
+    <div className="  flex items-center justify-center p-4 md:p-8">
       {/* Main Container */}
       <div className="templateContainer">
         <div className=" w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -40,7 +40,7 @@ export default function Benefit() {
             {serviceCards.map((card, index) => (
               <div key={index} className="flex-1 mt-10 sm:mt-0">
                 {/* Card Container */}
-                <div className="relative bg-white rounded-4xl shadow-xl p-8 pt-12 text-center  hover:-translate-y-2 transition-transform duration-300 ease-in-out h-full flex flex-col items-center">
+                <div className="relative bg-gray-50 rounded-4xl shadow-xl p-8 pt-12 text-center  hover:-translate-y-2 transition-transform duration-300 ease-in-out h-full flex flex-col items-center">
                   {/* Floating Icon - "Center Border Par Rahe" */}
                   {/* We use negative margin top or absolute positioning to pull it up */}
                   <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">

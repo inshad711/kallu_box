@@ -264,7 +264,7 @@ const ProductCategoryCard: React.FC<ProductCategoryCardProps> = ({
           {/* Decorative Line */}
           {/* <div className="w-12 h-1 bg-white/70 mb-4 rounded-full origin-left transition-all duration-300 group-hover:w-20 group-hover:bg-[#ff8f8f]" /> */}
 
-          <h3 className="text-white text-2xl md:text-3xl font-bold tracking-tight drop-shadow-lg mb-1">
+          <h3 className="text-white text-2xl md:text-3xl font-normal tracking-tight drop-shadow-lg mb-1">
             {category.title}
           </h3>
 
@@ -292,7 +292,7 @@ export default function Category() {
       <div className="templateContainer">
         <main className="py-12">
           {/* Section Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          {/* <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div className="max-w-xl">
               <h2 className="text-[#5c2e2e] font-semibold tracking-wide uppercase text-sm mb-3 flex items-center gap-2">
                 <span className="w-8 h-[2px] bg-[#5c2e2e]"></span>
@@ -306,6 +306,19 @@ export default function Category() {
               View all categories
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </button>
+          </div> */}
+          <div className="text-center mb-8">
+            <h1 className="text-3xl md:text-5xl  text-gray-900 mb-6 tracking-tight">
+              Curated Collections
+            </h1>
+
+            <div className="flex items-center justify-center gap-4 max-w-lg mx-auto">
+              <div className="h-px bg-yellow-600/30 flex-1" />
+              <p className="font-medium text-yellow-700/80 uppercase tracking-widest text-xs sm:text-sm">
+                Design your dream sanctuary.
+              </p>
+              <div className="h-px bg-yellow-600/30 flex-1" />
+            </div>
           </div>
 
           {/* Categories Grid */}

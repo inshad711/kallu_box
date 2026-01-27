@@ -99,10 +99,10 @@ const EditorialCard = ({ data }: { data: Category }) => {
 // --- Main Layout ---
 export default function ProductCategoryCard() {
   return (
-    <div className=" bg-white text-gray-900 ">
+    <div className=" bg-gray-50 py-12 text-gray-900 ">
       <div className="templateContainer">
         {/* Header */}
-        <header className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-gray-100 pb-8">
+        {/* <header className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-gray-100 pb-8">
           <div>
             <div className="flex items-center gap-2 mb-2 text-[#700000]">
               <Sparkles size={18} />
@@ -118,7 +118,21 @@ export default function ProductCategoryCard() {
             Curated selection of seasonal essentials, designed for the modern
             individual.
           </p>
-        </header>
+        </header> */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl md:text-5xl lg:text-5xl text-gray-900 mb-2 tracking-tight">
+            New Collections
+          </h1>
+
+          <div className="flex items-center justify-center gap-4 max-w-lg mx-auto">
+            {/* <div className="h-px bg-yellow-600/30 flex-1" /> */}
+            <p className="font-medium text-[#010101] capitalize tracking-widest text-xs sm:text-lg">
+              Curated selection of seasonal essentials, designed for the modern
+              individual.
+            </p>
+            {/* <div className="h-px bg-yellow-600/30 flex-1" /> */}
+          </div>
+        </div>
 
         {/* Grid */}
         <div className="mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">

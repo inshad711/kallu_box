@@ -826,6 +826,7 @@
 //     </header>
 //   );
 // }
+//////////////////////
 
 "use client";
 
@@ -849,9 +850,9 @@ function Header() {
   return (
     <header className="w-full relative z-50">
       {/* Top Contact Bar */}
-      <div className="bg-[#700000] text-white py-2 px-4">
+      <div className="bg-[#700000] text-white py-3 px-4">
         <div className="max-w-7xl mx-auto flex justify-center  text-[10px] md:text-sm">
-          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 md:gap-12">
+          <div className="flex flex-wrap justify-center items-center  gap-y-2 gap-4 md:gap-10">
             <div className="flex items-center gap-1.5">
               <Phone className="w-3 h-3 md:w-4 md:h-4" />{" "}
               {/* Adjusted icon size */}
@@ -871,9 +872,9 @@ function Header() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-b from-[#700000] from-50% to-transparent to-50% pt-1 -mb-12 relative z-20">
+      <div className="bg-gradient-to-b from-[#700000] from-50% to-transparent to-50% -mb-12 relative z-20">
         <div className="px-4 md:px-4">
-          <div className="bg-white rounded-full px-4 py-3 flex items-center justify-between shadow-sm max-w-7xl mx-auto">
+          <div className="bg-white rounded-full px-4 py-2 md:py-2 flex items-center justify-between shadow-sm max-w-7xl mx-auto">
             {/* Logo */}
             <Link href="/" className="shrink-0">
               <Image
@@ -887,48 +888,17 @@ function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex cursor-pointer items-center gap-8">
-              <Link href="/" className=" text-[#3d5a6c]">
+              <Link href="/" className="text-black hover:text-[#700000]">
                 Home
               </Link>
 
-              <Link
-                href="/about"
-                className="text-gray-500 hover:text-[#3d7a8a]"
-              >
+              <Link href="/about" className="text-black hover:text-[#700000]">
                 About Us
               </Link>
 
-              {/* Services Dropdown */}
-              {/* <div className="relative group">
-                <button className="flex items-center gap-1 text-gray-500 hover:text-[#3d7a8a]">
-                  Products
-                  <ChevronDown className="w-3 h-3 transition group-hover:rotate-180" />
-                </button>
-
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
-                  <Link
-                    href="/services/box"
-                    className="block px-4 py-2 hover:bg-gray-50"
-                  >
-                    Box Manufacturing
-                  </Link>
-                  <Link
-                    href="/services/design"
-                    className="block px-4 py-2 hover:bg-gray-50"
-                  >
-                    Custom Design
-                  </Link>
-                  <Link
-                    href="/services/logistics"
-                    className="block px-4 py-2 hover:bg-gray-50"
-                  >
-                    Logistics
-                  </Link>
-                </div>
-              </div> */}
               <Link
                 href="/products"
-                className="text-gray-500 hover:text-[#3d7a8a]"
+                className="text-black hover:text-[#700000]"
               >
                 Products
               </Link>
@@ -967,9 +937,10 @@ function Header() {
           <Link href="/services" onClick={() => setIsMobileMenuOpen(false)}>
             Services
           </Link>
-          <Link href="/pages" onClick={() => setIsMobileMenuOpen(false)}>
-            Pages
+          <Link href="/products" onClick={() => setIsMobileMenuOpen(false)}>
+            Products
           </Link>
+
           <Link
             href="/contact"
             className="bg-[#700000] text-white px-6 py-2 rounded-full text-center"

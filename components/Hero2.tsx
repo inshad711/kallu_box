@@ -117,22 +117,24 @@ import Image from "next/image";
 
 const Hero2 = () => {
   return (
-    <section className="relative w-full h-[600px] md:h-[90vh] overflow-hidden flex items-center justify-center text-white">
+    <section className="relative w-full h-[90vh]  md:h-screen overflow-hidden flex items-center justify-center text-white">
       {/* Background Container */}
       <div className="absolute inset-0 z-0">
         {/* Background Image */}
         <Image
           //   src="/images/2148343301.jpg"
-          src="/images/87f04430-3286-460c-8b89-94da7bba76d5.jpg"
+          // src="/images/87f04430-3286-460c-8b89-94da7bba76d5.jpg"
+          src="/images/Gemini_Generated_Image_itzc7jitzc7jitzc.png"
           alt="Packaging Background"
           fill
           priority
-          className="object-cover grayscale-[50%] sepia-[20%]"
+          // className="object-cover grayscale-[50%] sepia-[20%]"
+          className="object-cover "
         />
       </div>
 
       {/* Content Layer */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
+      <div className="relative z-10 max-w-7xl mb-12 lg:mb-32 mx-auto px-6 flex flex-col items-center text-center">
         {/* Established Date Header */}
         <div className="flex items-center gap-4 mb-4">
           <div className="h-[1px] w-12 bg-yellow-600/50" />
@@ -143,18 +145,22 @@ const Hero2 = () => {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl text-[#000] md:text-6xl font-medium tracking-tight leading-tight max-w-3xl mb-4">
+        {/* <h1 className="text-3xl text-[#000]  md:text-5xl font-medium  leading-tight max-w-3xl mb-4">
           MUMBAI’S PREMIER <br />
+          <span>PACKAGING LEGACY.</span>
+        </h1> */}
+        <h1 className="text-3xl text-[#000]   md:text-5xl font-medium  leading-tight max-w-3xl mb-4">
+          Mumbai's Premiere <br />
           <span>PACKAGING LEGACY.</span>
         </h1>
 
         {/* Subheading */}
-        <p className="text-lg md:text-xl font-light text-[#000] mb-8 max-w-xl">
+        <p className="text-lg md:text-lg font-light text-[#000] mb-8 max-w-xl">
           Crafting Your Brand&apos;s Identity Since Decades.
         </p>
 
         {/* CTA Button */}
-        <button className=" bg-gradient-to-r from-[#700000] to-[#3b0000] text-white transition-colors  font-semibold px-8 py-4 rounded-md shadow-lg">
+        <button className=" bg-gradient-to-r from-[#700000] to-[#3b0000] cursor-pointer text-white transition-colors  font-semibold px-6 py-3 rounded-md shadow-lg">
           Explore Our Collection
         </button>
       </div>

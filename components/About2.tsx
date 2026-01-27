@@ -134,47 +134,40 @@ import React from "react";
 export default function About2() {
   return (
     // Changed: bg-[#111111] -> bg-white, text-white -> text-black
-    <div className="bg-white text-black selection:bg-red-500 selection:text-white">
-      <section className="max-w-7xl mx-auto px-6 py-20 lg:py-32">
+    <div className="bg-white text-black ">
+      <section className="max-w-7xl mx-auto px-4 pt-20 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Text Content */}
           <div className="lg:col-span-4 space-y-8">
             <div className="space-y-4">
               {/* Section Header */}
               <div className="flex items-center gap-3">
-                {/* <div className="w-5 h-5 text-[#ed202b]">
-                  <svg viewBox="0 0 18 14" fill="currentColor">
-                    <path d="M0 14h18v-2H0v2zm0-4h18V8H0v2zm0-4h18V4H0v2zm0-4v2h18V2H0z" />
-                  </svg>
-                </div> */}
-                <span className="text-[#ed202b] text-sm font-bold tracking-widest uppercase">
+                <span className="text-[#700000] text-sm font-bold tracking-widest uppercase">
                   About Company
                 </span>
               </div>
 
               {/* Main Title */}
-              <h2 className="text-4xl md:text-5xl lg:text-5xl font-normal leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-5xl font-normal tracking-normal leading-10 ">
                 Company has been in operation more 14 years.
               </h2>
             </div>
 
             {/* Quote/Description Block */}
-            <div className="pl-6 border-l-2 border-[#ed202b] space-y-4">
+            <div className="pl-6 border-l-2 border-[#700000] space-y-4">
               {/* Changed: text-gray-300 -> text-gray-700 (darker for visibility) */}
               <p className="text-gray-700 text-lg leading-relaxed">
                 New installations, trust our team of licensed professionals to
                 protect.
               </p>
               {/* Changed: text-gray-400 -> text-gray-500 */}
-              <p className="text-gray-500 font-medium italic">
-                Gabriella S. Adams
-              </p>
+              <p className="text-gray-500 font-medium">Gabriella S. Adams</p>
             </div>
           </div>
 
           {/* Center Column: Hero Image */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full aspect-[4/5] max-w-md overflow-hidden rounded-sm shadow-2xl">
+            <div className="relative w-full aspect-[8/9] max-w-md overflow-hidden rounded-sm shadow-2xl">
               <img
                 src="https://framerusercontent.com/images/SbNYmKxyQbIqTz5RyldJrCcUE8.jpg?width=900"
                 alt="Professional Roofer at Work"
@@ -185,14 +178,14 @@ export default function About2() {
           </div>
 
           {/* Right Column: Counters */}
-          <div className="lg:col-span-3 flex flex-col justify-center space-y-8">
+          <div className="lg:col-span-3 flex flex-col justify-center space-y-3 md:space-y-8">
             {/* Counter 1: 3k */}
             <div className="relative flex items-center justify-center lg:justify-start w-fit mx-auto lg:mx-0">
               {/* Outline Number */}
               <span
-                className="text-[130px] md:text-[180px] font-black opacity-25 select-none leading-none inline-block py-4"
+                className="text-[120px] md:text-[180px] font-black opacity-25 select-none leading-none inline-block py-4"
                 style={{
-                  WebkitTextStroke: "2px #ed202b",
+                  WebkitTextStroke: "2px #700000",
                   color: "transparent",
                 }}
               >
@@ -213,9 +206,9 @@ export default function About2() {
             <div className="relative flex items-center justify-center lg:justify-start w-fit mx-auto lg:mx-0">
               {/* Outline Number */}
               <span
-                className="text-[130px] md:text-[180px] font-black opacity-25 select-none leading-none inline-block py-4"
+                className="text-[120px] md:text-[180px] font-black opacity-25 select-none leading-none inline-block py-4"
                 style={{
-                  WebkitTextStroke: "2px #ed202b",
+                  WebkitTextStroke: "2px #700000",
                   color: "transparent",
                 }}
               >

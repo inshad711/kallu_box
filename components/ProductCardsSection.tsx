@@ -89,7 +89,7 @@ export default function ProductCardsSection() {
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6 tracking-tight">
+            <h1 className="text-3xl md:text-5xl  text-gray-900 mb-6 tracking-tight">
               Premium Packaging Solutions
             </h1>
 

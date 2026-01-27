@@ -263,7 +263,7 @@ const StatItem: React.FC<StatItemProps> = ({
       {/* Content */}
       <div className="flex flex-col items-start justify-center">
         <div className="flex items-baseline font-medium text-5xl text-gray-900 leading-none">
-          <span>{animatedValue}</span>
+          <span>{animatedValue}+</span>
           {suffix && (
             <span className="text-[#700000] ml-1 text-4xl">{suffix}</span>
           )}
@@ -281,17 +281,12 @@ const Stats2: React.FC = () => {
     <div className="flex items-center justify-center">
       <div className="w-full max-w-7xl">
         <div className="bg-white p-8 lg:px-16 lg:py-12 relative overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 relative z-10 divide-y md:divide-y-0 md:divide-x divide-gray-100">
-            <div className="flex justify-center md:justify-start">
-              <StatItem
-                icon={Package}
-                title="Experience"
-                value={23}
-                delay={0}
-              />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 relative z-10 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+            <div className="flex justify-start md:justify-start">
+              <StatItem icon={Package} title="Experience" value={5} delay={0} />
             </div>
 
-            <div className="flex justify-center md:justify-start md:pl-8">
+            <div className="flex justify-start md:justify-start md:pl-8">
               <StatItem
                 icon={Star}
                 title="Customer Rate"
@@ -301,13 +296,12 @@ const Stats2: React.FC = () => {
               />
             </div>
 
-            <div className="flex justify-center md:justify-start md:pl-8">
+            <div className="flex justify-start md:justify-start md:pl-8">
               <StatItem
                 icon={CheckCircle2}
                 title="Project Done"
                 value={6.1}
                 isDecimal
-                suffix="+"
                 delay={400}
               />
             </div>

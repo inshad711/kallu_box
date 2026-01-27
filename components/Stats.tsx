@@ -116,12 +116,12 @@ const WhyChooseUs: React.FC = () => {
       <section className="py-20 templateContainer">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
           {/* Column 1: Text Content */}
-          <div className="space-y-8 animate-fade-in-up">
+          <div className="space-y-6 animate-fade-in-up">
             <div className="space-y-4">
-              <h4 className="text-sm font-bold tracking-widest text-[#700000] uppercase">
+              <h4 className="text-sm font-medium tracking-widest text-[#700000] uppercase">
                 Our Benefits
               </h4>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] leading-tight">
+              <h2 className="text-3xl md:text-4xl uppercase font-medium text-[#1a1a1a] leading-tight">
                 Why Choose Us
               </h2>
             </div>
@@ -131,7 +131,7 @@ const WhyChooseUs: React.FC = () => {
               tellus, luctus nec ullamcorper mattis, pulvinar dapibus.
             </p>
 
-            <button className="group inline-flex items-center gap-3 bg-gradient-to-r from-[#700000] to-[#3b0000] text-white px-10 py-4 rounded-full font-bold">
+            <button className="group inline-flex cursor-pointer items-center gap-3 bg-gradient-to-r from-[#700000] to-[#3b0000] text-white px-10 py-4 rounded-full font-bold">
               <span>Learn More</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
@@ -149,7 +149,7 @@ const WhyChooseUs: React.FC = () => {
           </div>
 
           {/* Column 3: Features */}
-          <div className="space-y-6">
+          <div className="space-y-2">
             <FeatureItem
               icon={<ThumbsUp className="w-6 h-6 text-white" />}
               title="Premium Quality"
@@ -181,9 +181,9 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
   description,
 }) => {
   return (
-    <div className="flex gap-5 items-center group p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-gray-100 border border-transparent hover:border-gray-50">
+    <div className="flex gap-5 items-center group p-4 rounded-full transition-all duration-300 bg-gray-50">
       <div className="flex-shrink-0">
-        <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#700000] to-[#3b0000] text-white shadow-md shadow-emerald-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+        <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#700000] to-[#3b0000] text-white shadow-md shadow-emerald-100 flex items-center justify-center">
           {icon}
         </div>
       </div>

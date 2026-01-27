@@ -53,6 +53,12 @@ const products: Product[] = [
     image:
       "https://images.unsplash.com/photo-1576183453862-1908e5e1d58a?w=300&h=300&fit=crop",
   },
+  {
+    id: 8,
+    name: "Gift Boxes",
+    image:
+      "https://images.unsplash.com/photo-1576183453862-1908e5e1d58a?w=300&h=300&fit=crop",
+  },
 ];
 
 export default function ProductCards() {
