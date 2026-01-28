@@ -828,16 +828,148 @@
 // }
 //////////////////////
 
+// "use client";
+
+// import React, { useState } from "react";
+// import Link from "next/link";
+// import Image from "next/image";
+// import { Phone, Mail, MapPin, ChevronDown, Menu, X } from "lucide-react";
+
+// export default function MainHeader() {
+//   return (
+//     // FIX 1: Changed bg-gray-50 to bg-transparent to avoid blocking the hero background
+//     <div className="bg-transparent">
+//       <Header />
+//     </div>
+//   );
+// }
+
+// function Header() {
+//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+//   return (
+//     <header className="w-full relative z-50">
+//       {/* Top Contact Bar */}
+//       <div className="bg-[#700000] text-white py-3 px-4">
+//         <div className="max-w-7xl mx-auto flex justify-center  text-[10px] md:text-sm">
+//           <div className="flex flex-wrap justify-center items-center  gap-y-2 gap-4 md:gap-10">
+//             <div className="flex items-center gap-1.5">
+//               <Phone className="w-3 h-3 md:w-4 md:h-4" />{" "}
+//               {/* Adjusted icon size */}
+//               <span>(+654) 6478909</span>
+//             </div>
+
+//             <div className="flex items-center gap-1.5">
+//               <Mail className="w-3 h-3 md:w-4 md:h-4" />
+//               <span>mail@packga.id</span>
+//             </div>
+
+//             <div className="flex items-center gap-1.5">
+//               <MapPin className="w-3 h-3 md:w-4 md:h-4" />
+//               <span>London Eye, London</span>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="bg-gradient-to-b from-[#700000] from-50% to-transparent to-50% -mb-12 relative z-20">
+//         <div className="px-4 md:px-4">
+//           <div className="bg-white rounded-full px-4 py-2 md:py-2 flex items-center justify-between shadow-sm max-w-7xl mx-auto">
+//             {/* Logo */}
+//             <Link href="/" className="shrink-0">
+//               <Image
+//                 src="/logo/e18da22c-b1a2-454a-ba30-a0094f99529b.png"
+//                 alt="Packeqa Logo"
+//                 width={180}
+//                 height={60}
+//                 className="object-contain w-[150px] md:w-[180px]"
+//               />
+//             </Link>
+
+//             {/* Desktop Navigation */}
+//             <nav className="hidden lg:flex cursor-pointer items-center gap-8">
+//               <Link href="/" className="text-black hover:text-[#700000]">
+//                 Home
+//               </Link>
+
+//               <Link href="/about" className="text-black hover:text-[#700000]">
+//                 About Us
+//               </Link>
+
+//               <Link
+//                 href="/products"
+//                 className="text-black hover:text-[#700000]"
+//               >
+//                 Products
+//               </Link>
+//             </nav>
+
+//             {/* Right Side */}
+//             <div className="flex items-center gap-4">
+//               <Link
+//                 href="/contact"
+//                 className="hidden md:block bg-gradient-to-r from-[#700000] to-[#3b0000] text-white px-7 py-2.5 rounded-full shadow hover:opacity-90"
+//               >
+//                 Contact Us
+//               </Link>
+
+//               {/* Mobile Toggle */}
+//               <button
+//                 className="lg:hidden"
+//                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+//               >
+//                 {isMobileMenuOpen ? <X /> : <Menu />}
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Mobile Menu */}
+//       {isMobileMenuOpen && (
+//         <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl py-6 px-6 flex flex-col gap-4 z-50">
+//           <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+//             Home
+//           </Link>
+//           <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>
+//             About Us
+//           </Link>
+//           <Link href="/services" onClick={() => setIsMobileMenuOpen(false)}>
+//             Services
+//           </Link>
+//           <Link href="/products" onClick={() => setIsMobileMenuOpen(false)}>
+//             Products
+//           </Link>
+
+//           <Link
+//             href="/contact"
+//             className="bg-[#700000] text-white px-6 py-2 rounded-full text-center"
+//             onClick={() => setIsMobileMenuOpen(false)}
+//           >
+//             Contact Us
+//           </Link>
+//         </div>
+//       )}
+//     </header>
+//   );
+// }
+
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // 1. Import useEffect
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, ChevronDown, Menu, X } from "lucide-react";
 
+const NAV_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+
+  { href: "/products", label: "Products" },
+];
+
 export default function MainHeader() {
   return (
-    // FIX 1: Changed bg-gray-50 to bg-transparent to avoid blocking the hero background
     <div className="bg-transparent">
       <Header />
     </div>
@@ -847,26 +979,48 @@ export default function MainHeader() {
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // 2. Add this Logic to lock/unlock scroll
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      // Prevent scrolling
+      document.body.style.overflow = "hidden";
+    } else {
+      // Re-enable scrolling
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup function to ensure scroll is re-enabled if component unmounts
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <header className="w-full relative z-50">
       {/* Top Contact Bar */}
       <div className="bg-[#700000] text-white py-3 px-4">
-        <div className="max-w-7xl mx-auto flex justify-center  text-[10px] md:text-sm">
-          <div className="flex flex-wrap justify-center items-center  gap-y-2 gap-4 md:gap-10">
-            <div className="flex items-center gap-1.5">
-              <Phone className="w-3 h-3 md:w-4 md:h-4" />{" "}
-              {/* Adjusted icon size */}
-              <span>(+654) 6478909</span>
+        <div className="max-w-7xl mx-auto flex justify-center text-[10px] md:text-sm">
+          <div className="flex flex-wrap justify-center items-center gap-y-2 gap-4 md:gap-10">
+            {/* Phone Link */}
+            <a href="tel:+08046049874" className="flex items-center gap-1.5 ">
+              <Phone className="w-3 h-3 md:w-4 md:h-4" />
+              <span>08046049874</span>
+            </a>
+
+            {/* Email Link */}
+            <div className="hidden md:flex">
+              <a
+                href="mailto:mail@packga.id"
+                className="flex items-center gap-1.5"
+              >
+                <Mail className="w-3 h-3 md:w-4 md:h-4" />
+                <span>mail@packga.id</span>
+              </a>
             </div>
 
             <div className="flex items-center gap-1.5">
-              <Mail className="w-3 h-3 md:w-4 md:h-4" />
-              <span>mail@packga.id</span>
-            </div>
-
-            <div className="flex items-center gap-1.5">
-              <MapPin className="w-3 h-3 md:w-4 md:h-4" />
-              <span>London Eye, London</span>
+              <MapPin className="w-3 h-3 md:w-4 md:h-4" />{" "}
+              <span>Kalbadevi, Mumbai, Maharashtra</span>
             </div>
           </div>
         </div>
@@ -888,20 +1042,15 @@ function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex cursor-pointer items-center gap-8">
-              <Link href="/" className="text-black hover:text-[#700000]">
-                Home
-              </Link>
-
-              <Link href="/about" className="text-black hover:text-[#700000]">
-                About Us
-              </Link>
-
-              <Link
-                href="/products"
-                className="text-black hover:text-[#700000]"
-              >
-                Products
-              </Link>
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-black hover:text-[#700000]"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
 
             {/* Right Side */}
@@ -927,19 +1076,17 @@ function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl py-6 px-6 flex flex-col gap-4 z-50">
-          <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-            Home
-          </Link>
-          <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>
-            About Us
-          </Link>
-          <Link href="/services" onClick={() => setIsMobileMenuOpen(false)}>
-            Services
-          </Link>
-          <Link href="/products" onClick={() => setIsMobileMenuOpen(false)}>
-            Products
-          </Link>
+        // Added 'h-screen' so the menu actually covers the screen height if needed
+        <div className="lg:hidden absolute top-full left-0 w-full h-screen bg-white shadow-xl py-6 px-6 flex flex-col gap-4 z-50">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
 
           <Link
             href="/contact"

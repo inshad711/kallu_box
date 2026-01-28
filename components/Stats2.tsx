@@ -254,14 +254,14 @@ const StatItem: React.FC<StatItemProps> = ({
       }`}
     >
       {/* Icon */}
-      <div className="flex-shrink-0 relative group">
+      {/* <div className="flex-shrink-0 relative group">
         <div className="relative flex items-center justify-center w-[70px] h-[70px] bg-gradient-to-r from-[#700000] to-[#3b0000] text-white rounded-full shadow-lg transition-transform duration-300 group-hover:scale-105">
           <Icon className="w-8 h-8 text-white" strokeWidth={2} />
         </div>
-      </div>
+      </div> */}
 
       {/* Content */}
-      <div className="flex flex-col items-start justify-center">
+      <div className="flex flex-col items-center justify-center">
         <div className="flex items-baseline font-medium text-5xl text-gray-900 leading-none">
           <span>{animatedValue}+</span>
           {suffix && (

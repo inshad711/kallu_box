@@ -176,15 +176,14 @@ interface ProductCategoryCardProps {
 const categories: Category[] = [
   {
     id: "1",
-    title: "Modern Living",
-    image:
-      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=800",
+    title: "Corrugated Boxes",
+    image: "https://www.thebaxsaaco.com/corrugated-boxes",
     count: 124,
     featured: true,
   },
   {
     id: "2",
-    title: "Minimalist Bedroom",
+    title: "Rigid Boxes",
     image:
       "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800",
     count: 85,
@@ -286,7 +285,7 @@ const ProductCategoryCard: React.FC<ProductCategoryCardProps> = ({
 // --- Main App ---
 export default function Category() {
   return (
-    <div className="bg-gray-50">
+    <div className="">
       {/* Header removed as requested */}
 
       <div className="templateContainer">

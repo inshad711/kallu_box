@@ -113,7 +113,7 @@ const WhyChooseUs: React.FC = () => {
   return (
     <div className="bg-white text-gray-800">
       {/* Main Section Container */}
-      <section className="py-20 templateContainer">
+      <section className="py-12 templateContainer">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
           {/* Column 1: Text Content */}
           <div className="space-y-6 animate-fade-in-up">
@@ -142,9 +142,9 @@ const WhyChooseUs: React.FC = () => {
             <div className="absolute inset-0 bg-[#50c594] rounded-full blur-3xl opacity-20 scale-90 -z-10"></div>
 
             <img
-              src="https://kitpro.site/kit-packega/wp-content/uploads/sites/237/2024/03/7-1-1024x817.png"
+              src="/images/d7bd4135-27d3-4faf-9f8f-4dc1677247d4.png"
               alt="Feature Illustration"
-              className="w-full max-w-md h-auto object-contain hover:scale-105 transition-transform duration-500"
+              className="w-full max-w-lg h-auto object-contain hover:scale-105 transition-transform duration-500"
             />
           </div>
 

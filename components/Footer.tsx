@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#000]/90 text-white/80 font-sans pt-8 pb-2 relative overflow-hidden">
+    <footer className="w-full bg-[#e6e1c9] text-black  pt-8 pb-2 relative overflow-hidden">
       {/* Optional: Subtle background glow effects to match modern framer aesthetics */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px]" />
@@ -34,21 +34,15 @@ export default function Footer() {
               />
             </div>
 
-            <p className="text-white/70 leading-relaxed text-sm max-w-sm">
+            <p className="leading-relaxed text-sm max-w-sm">
               Our goal is to empower agencies, businessmen, and freelancers with
               creative freedom. Our goal is to empower agencies, businessmen,
               and freelancers with creative freedom.
             </p>
 
             <div className="pt-4">
-              <h6 className="text-white text-sm font-semibold mb-4">
-                Follow Us On:
-              </h6>
+              <h6 className="text-sm font-semibold mb-4">Follow Us On:</h6>
               <div className="flex gap-3">
-                <SocialButton
-                  icon={<Globe size={18} />}
-                  href="https://google.com"
-                />
                 <SocialButton
                   icon={<Linkedin size={18} />}
                   href="https://linkedin.com"
@@ -90,19 +84,20 @@ export default function Footer() {
             <SectionHeader title="Contact Us" />
             <div className="space-y-4">
               <ContactItem
-                icon={<MapPin size={18} className="text-white" />}
-                text="2005 Stokes Isled Apt. 899 Vacaville 10010, USA"
-                href="https://maps.google.com"
+                icon={<MapPin size={18} className="" />}
+                text="Kallu Box & Sons
+Shop No. 108/112, Ustad Building, Ground Floor, Shop No. 1, Opposite KHARA KUWA, Next to Bherumal Shamandas, Zaveri Bazar, Kalbadevi, Mumbai - 400002, Maharashtra, India"
+                href="https://www.google.com/maps?q=18.95098000,72.83074000"
               />
-              <ContactItem
+              {/* <ContactItem
                 icon={<Mail size={18} className="text-white" />}
                 text="info@yourdomain.com"
                 href="mailto:info@yourdomain.com"
-              />
+              /> */}
               <ContactItem
-                icon={<Phone size={18} className="text-white" />}
-                text="(+68) 120034509"
-                href="tel:+68120034509"
+                icon={<Phone size={18} className="" />}
+                text="08046049874"
+                href="tel:08046049874"
               />
             </div>
           </div>
@@ -110,11 +105,11 @@ export default function Footer() {
 
         {/* Footer Bottom: Divider & Copyright */}
         <div className="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row items-center justify-center text-center">
-          <p className="text-white/50 text-sm">
+          <p className="text-black text-sm">
             © 2025 Finanex By{" "}
             <a
               href="https://framerdevs.com"
-              className="text-white hover:text-[#43aeff] transition-colors"
+              className="text-black hover:text-[#700000] transition-colors"
             >
               Framerdevs
             </a>
@@ -129,9 +124,9 @@ export default function Footer() {
 function SectionHeader({ title }: { title: string }) {
   return (
     <div className="mb-6">
-      <h5 className="relative inline-block text-white font-semibold text-lg">
+      <h5 className="relative inline-block text-black font-semibold text-lg">
         {title}
-        <span className="absolute left-0 -bottom-1 w-full h-[2px] rounded-full bg-gradient-to-r from-[#700000] to-[#3b0000] text-white" />
+        <span className="absolute left-0 -bottom-1 w-full h-[2px] rounded-full bg-gradient-to-r from-[#700000] to-[#3b0000] text-black" />
       </h5>
     </div>
   );
@@ -148,10 +143,10 @@ function FooterLink({
     <li>
       <a
         href={href}
-        className="text-white/70 hover:text-white transition-colors duration-200 text-sm flex items-center gap-2 group"
+        className="text-black hover:text-black transition-colors duration-200 text-sm flex items-center gap-2 group"
       >
         {/* Subtle hover arrow effect */}
-        <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-300 opacity-0 group-hover:opacity-100 text-[#43aeff]">
+        <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-300 opacity-0 group-hover:opacity-100 text-[#700000]">
           <ArrowRight size={12} />
         </span>
         {children}
@@ -166,7 +161,7 @@ function SocialButton({ icon, href }: { icon: React.ReactNode; href: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-10 h-10 flex items-center justify-center rounded-xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 text-white hover:scale-110 hover:border-white/40 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm"
+      className="w-10 h-10 flex items-center justify-center rounded-xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 text-black hover:scale-110 hover:border-white/40 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm"
     >
       {icon}
     </a>
@@ -192,7 +187,7 @@ function ContactItem({
       <div className="shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-gradient-to-br from-white/10 to-transparent flex items-center justify-center border border-white/10 group-hover:border-[#cf55fe]/50 transition-colors">
         {icon}
       </div>
-      <span className="text-sm text-white/80 group-hover:text-white transition-colors pt-1">
+      <span className="text-sm text-black group-hover:text-white transition-colors pt-1">
         {text}
       </span>
     </a>

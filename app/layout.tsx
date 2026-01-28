@@ -12,6 +12,7 @@ import {
   Playfair_Display,
   Nunito_Sans,
 } from "next/font/google";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function RootLayout({
         <MainHeader />
         {children}
         <Footer />
+        <FloatingWhatsApp />
       </body>
     </html>
   );
