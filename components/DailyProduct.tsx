@@ -65,9 +65,9 @@ export default function DailyProduct() {
         {/* Instance 2: Using Unsplash placeholders */}
         <BannerWidget
           // Landscape
-          desktopImageUrl="/images/banner.PNG"
+          desktopImageUrl="/imagesW/KALLU-BOX-DESKTOP.webp"
           // Portrait
-          mobileImageUrl="/images/KALLU BOX CATEGORY BANNER 1 FOR WEBSITE -MOBILE.PNG"
+          mobileImageUrl="/imagesW/KALLU-BOX-BILE.webp"
           targetUrl="/products"
           altText="jewellery"
         />

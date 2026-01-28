@@ -127,7 +127,7 @@ const CollectionCallout = () => {
               </span>
 
               {/* Heading */}
-              <h2 className="text-4xl md:text-5xl font-serif text-gray-900 leading-[1.1]">
+              <h2 className="text-4xl md:text-5xl text-gray-900 leading-[1.0]">
                 coffee making essentials
               </h2>
 

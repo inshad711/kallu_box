@@ -14,7 +14,7 @@ export default function AboutPage() {
       {/* <Revel2 /> */}
       {/* <Revel /> */}
       <CTA />
-      <Category3 />
+      {/* <Category3 /> */}
       {/* <About /> */}
     </div>
   );

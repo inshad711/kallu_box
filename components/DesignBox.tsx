@@ -65,9 +65,9 @@ export default function DesignBox() {
         {/* Instance 2: Using Unsplash placeholders */}
         <BannerWidget
           // Landscape
-          desktopImageUrl="/images/kall.PNG"
+          desktopImageUrl="/imagesW/KALLU-BOX-CATEGORY-BANNERFOR-WEBSITE-DESKTOP.webp"
           // Portrait
-          mobileImageUrl="/images/KALLU BOX CATEGORY BANNER 2 FOR WEBSITE -MOBILE.PNG"
+          mobileImageUrl="/imagesW/KALLUMOBILE.webp"
           targetUrl="/products"
           altText="jewellery"
         />

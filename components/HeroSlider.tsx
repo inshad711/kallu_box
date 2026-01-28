@@ -239,27 +239,48 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+// const sliderData = [
+//   {
+//     id: 1,
+//     desktop: "/slider/KALLU BOX BANNER FOR WEBSITE.png",
+//     mobile: "/slider/KALLU BOX BANNER FOR WEBSITE - MOBILE.png",
+//     alt: "Gemini Generated Art",
+//   },
+//   {
+//     id: 2,
+//     desktop: "/slider/KALLU BOX-BANNER 2-FOR-WEBSITE - DESKTOP.png",
+//     mobile: "/slider/KALLU-BOX-BANNER-2-FOR WEBSITE - MOBILE.png",
+//     alt: "Kallu Box Banner",
+//   },
+//   {
+//     id: 3,
+//     desktop: "/slider/KALLU BOX BANNER 3 FOR WEBSITE - DESKTOP.png",
+//     mobile: "/slider/KALLU BOX BANNER 3 FOR WEBSITE - MOBILE.png",
+//     alt: "Kallu Box Banner Duplicate",
+//   },
+// ];
+
 const sliderData = [
   {
     id: 1,
-    desktop: "/slider/KALLU BOX BANNER FOR WEBSITE.png",
-    mobile: "/slider/KALLU BOX BANNER FOR WEBSITE - MOBILE.png",
+
+    desktop: "/imagesW/KALLU-BOX-BANNER-FOR-WEBSITE.webp",
+    mobile: "/imagesW/KALLU-BOX-BANNER-FOR-WEBSITE-MOBILE.webp",
     alt: "Gemini Generated Art",
   },
   {
     id: 2,
-    desktop: "/slider/KALLU BOX-BANNER 2-FOR-WEBSITE - DESKTOP.png",
-    mobile: "/slider/KALLU-BOX-BANNER-2-FOR WEBSITE - MOBILE.png",
+    desktop: "/imagesW/KALLU-BOX-BANNER-2-FOR-WEBSITE-DESKTOP.webp",
+    mobile: "/imagesW/KALLU-BOX-BANNER-2-FOR-WEBSITE-MOBILE.webp",
     alt: "Kallu Box Banner",
   },
   {
     id: 3,
-    desktop: "/slider/KALLU BOX BANNER 3 FOR WEBSITE - DESKTOP.png",
-    mobile: "/slider/KALLU BOX BANNER 3 FOR WEBSITE - MOBILE.png",
+    desktop: "/imagesW/KALLU-BOX-BANNER-3-FOR-WEBSITE-DESKTOP.webp",
+    mobile: "/imagesW/KALLU-BOX-BANNER-3-FOR-WEBSITE -MOBILE.webp",
     alt: "Kallu Box Banner Duplicate",
   },
 ];
-
 const HeroSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
